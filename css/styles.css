@@ -1,17 +1,145 @@
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-h1 {
-  color: #333;
-}
-#result .green {
-  color: #2ecc71;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ecf0f1; /* Fondo claro para la página */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  padding: 20px;
 }
 
-#result .red {
-  color: #e74c3c;
+h1 {
+  color: #34495e; /* Título con un color gris oscuro */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 3rem; /* Aumento del tamaño del título */
+}
+
+.container {
+  background: #dcdcdc; /* Fondo gris suave para el contenedor */
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  width: 100%;
+  max-width: 400px; /* Asegura que no crezca más allá de un cierto tamaño */
+  text-align: center;
+}
+
+.container p {
+  font-size: 1.2rem;
+  color: #34495e; /* Gris oscuro para el texto */
+  margin-bottom: 20px;
+}
+
+#countdown {
+  font-size: 2rem;
+  margin-top: 20px;
+  color: #f39c12; /* Color amarillo para el contador */
+  font-weight: bold;
+}
+
+#result {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #34495e; /* Gris oscuro para el texto de resultados */
+}
+
+.green {
+  color: #2ecc71; /* Verde para resultados positivos */
+  font-weight: bold;
+}
+
+.red {
+  color: #e74c3c; /* Rojo para resultados negativos */
+  font-weight: bold;
+}
+
+input[type="number"] {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 16px;
+  font-size: 1.2rem;
+  width: 100px;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #ecf0f1;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+button {
+  display: block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #3498db;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem; /* Reducción del tamaño del título en pantallas pequeñas */
+  }
+
+  .container {
+    padding: 30px 20px;
+    max-width: 100%; /* Hace que la caja ocupe todo el ancho disponible en pantallas pequeñas */
+  }
+
+  #countdown {
+    font-size: 1.5rem; /* Ajusta el tamaño del contador */
+  }
+
+  input[type="number"] {
+    width: 80px; /* Ajuste en el tamaño del input para pantallas pequeñas */
+  }
+
+  button {
+    padding: 10px 25px;
+    font-size: 0.9rem; /* Botón un poco más pequeño */
+  }
+
+  #result {
+    font-size: 1rem; /* Ajusta el tamaño del texto del resultado */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 35px 25px;
+  }
+
+  input[type="number"] {
+    width: 90px;
+  }
+
+  button {
+    padding: 12px 28px;
+  }
 }
